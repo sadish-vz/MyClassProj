@@ -4,7 +4,7 @@
 	<property name="main.build.dir" value="build/main" />  
 	  <property name="main.src.dir" value="src" />
 	  <property name="test.build.dir" value="build/test" />
-	  <property name="test.src.dir" value="src/test" />
+	<property name="test.src.dir" value="test" />
 	<path id="classpath.base" />
 	<path id="classpath.test">
 		<pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
