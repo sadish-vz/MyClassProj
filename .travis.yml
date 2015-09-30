@@ -2,4 +2,17 @@ language: java
 jdk:
   - oraclejdk7
   - openjdk7
-  - openjdk6
+  
+  env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "L661zcchbAUlfkTOL4KBRZyxv5fx1py2Nl3JW8jyJUibEVlYdNh3X6jphJbQod3uZhxqWMEGMqFXKhV7iD1uS07gcdqEs0QP46Njj9XrLmqyjr4QfdHUryQHhKOkpuoDkzBFXIkM4Flrh8TuPqmwio//PV1WyOc2U/CMH7yCj9tNcDoSyhHperG1D/Dr9CfoICz/JimV6Qa+rSVMd8FPLCvVSm4RrqogQmWdjWFQuKAkXzHu6GoxPqjCqkqIbI2syPhBHPcqZMUhgHN1XW2I1OgUHsiakxPBk6AfMyJrDCBGkxLmnShUnPtnQxJKtLFrAslfe25Jb+7NUI9fEWVjxpPaob1K0ul6ytza98zOWW3AjDQEdGRP8XMUiMrOh/dbwAiAP2hbjjPjG1+CIX4NCEbSmvmZuwOsjhZXUqSbKKAcUoAY82VwBfC+qnyUGbGPzaa/Sv4j6BkLpjwQ7+cCuITIg5VVThV92cga7NNMiDthkuiPnWe+pCEkEePacmfg4Bq/LdWLKKKdxP+KWcRdaoJdugi+5mRwKBI2ng7Wu+gtS3jWf5Cp+acUNR0xVNj1x9sCcdqgGc/ivg+PC6xIRgsun8X9tl12WyJle4sdGoqn4MRKL2UPThRFmsHTv6fC61nDMNLwzJ2+PM7KYU51w7mnOeUqL1FI7+DkPTvw1qk="
+
+addons:
+  coverity_scan:
+    project:
+      name: "sadish-vz/MyClassProj"
+    notification_email: sadishkumar.x.neelamegam@verizon.com
+    build_command:   "compilation"
+    branch_pattern: master
