@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="test" name="MyClassProj">
 	<property name="main.build.dir" value="build/main" />  
 	  <property name="main.src.dir" value="src" />
@@ -14,8 +14,15 @@
 	
 	<target name="test" depends="run, clean" />
 	
+	<target name="compilation">
+		    <mkdir dir="${main.build.dir}"/>
+		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
+		      <classpath refid="classpath.base"/>
+		    </javac>
+		  </target>
+	
 	<target name="compile">
-	    <mkdir dir="${main.build.dir}"/>
+	    <!--<mkdir dir="${main.build.dir}"/>-->
 	    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
 	      <classpath refid="classpath.base"/>
 	    </javac>
