@@ -14,5 +14,5 @@ addons:
     project:
       name: "sadish-vz/MyClassProj"
     notification_email: sadishkumar.x.neelamegam@verizon.com
-    build_command:   "compilation"
+    build_command:   "ant compilation"
     branch_pattern: master
