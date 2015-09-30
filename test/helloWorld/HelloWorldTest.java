@@ -12,7 +12,7 @@ public class HelloWorldTest {
 	@Test
 	public void test() {
 		MyCl hello = new MyCl();
-		assertEquals("A test for Hello World String", "Hello World", hello.sayHello());
+		assertEquals("A test for Hello World String", "Hello Wold", hello.sayHello());
 	}
 
 }
